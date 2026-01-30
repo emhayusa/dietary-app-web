@@ -1,0 +1,234 @@
+.planner-page {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.planner-header {
+    margin-bottom: 24px;
+}
+
+.planner-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.planner-actions {
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 600px) {
+    .planner-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .planner-header-content>div:first-child {
+        width: 100%;
+    }
+
+    .planner-actions {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .planner-actions button {
+        flex: 1;
+        /* Only equal width full stretch on mobile */
+    }
+}
+
+.planner-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .planner-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .planner-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.day-column {
+    min-width: 0;
+    /* Allow shrinking in grid */
+    /* Slightly Reduced from 200px */
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 12px;
+    /* Slight reduction */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.day-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.meal-slot {
+    background: white;
+    border-radius: 8px;
+    min-height: 100px;
+    border: 1px dashed var(--color-border);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.meal-slot.filled {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.add-meal-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+}
+
+.add-meal-btn:hover {
+    background: rgba(0, 0, 0, 0.02);
+    color: var(--color-primary);
+}
+
+.slot-card {
+    height: 80px;
+    /* Reduced from 100px */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 6px;
+    /* slightly smaller radius */
+}
+
+.slot-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 8px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.slot-title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slot-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cal-badge {
+    font-size: 0.7rem;
+    opacity: 0.9;
+}
+
+.remove-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: rgba(244, 67, 54, 0.8);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.selector-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.selector-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.selector-item:hover {
+    background: #f5f5f5;
+}
+
+.selector-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.selector-item span {
+    font-weight: 500;
+}

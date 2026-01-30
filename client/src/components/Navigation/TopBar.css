@@ -1,0 +1,117 @@
+.topbar {
+    height: 70px;
+    background-color: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 260px;
+    /* Match sidebar width approx */
+}
+
+.logo-icon {
+    font-size: 24px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 480px;
+    position: relative;
+    margin: 0 var(--spacing-lg);
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    border-radius: 20px;
+    /* More rounded */
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: var(--color-surface);
+    box-shadow: 0 0 0 4px rgba(0, 230, 118, 0.1);
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.top-nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.top-nav-links a {
+    text-decoration: none;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.top-nav-links a:hover {
+    color: var(--color-text-primary);
+}
+
+.icon-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--color-text-primary);
+}
+
+.icon-btn:hover {
+    background-color: var(--color-background);
+}
+
+.badge-dot {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    border: 2px solid var(--color-surface);
+}

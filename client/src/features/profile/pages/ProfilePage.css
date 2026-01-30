@@ -1,0 +1,31 @@
+.profile-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.profile-loading,
+.profile-error {
+    text-align: center;
+    padding: 60px;
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+}
+
+.profile-footer {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    bottom: 20px;
+    background: transparent;
+}
+
+.profile-footer button {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.error-text {
+    color: #D32F2F;
+    text-align: right;
+    margin-top: 8px;
+}

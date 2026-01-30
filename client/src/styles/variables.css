@@ -1,0 +1,54 @@
+:root {
+  /* Brand Colors */
+  --color-primary: #00E676;
+  --color-secondary: #00BFA5; /* Gluten Free Green */
+  --color-accent-vegetarian: #7CB342;
+  --color-accent-keto: #00E676; /* Same as primary */
+  
+  /* Neutral Colors */
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #212121;
+  --color-text-secondary: #757575;
+  --color-border: #E0E0E0;
+  
+  /* Status/Feedback */
+  --color-error: #D32F2F;
+  --color-success: #388E3C;
+  --color-warning: #FFA000;
+  
+  /* Typography */
+  --font-family-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Components */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}

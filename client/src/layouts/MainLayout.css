@@ -1,0 +1,49 @@
+.main-layout {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-body {
+    display: flex;
+    flex: 1;
+}
+
+.content-area {
+    flex: 1;
+    padding: var(--spacing-lg);
+    max-width: 1400px;
+    min-width: 0;
+    /* Critical for internal overflow scrolling to work */
+}
+
+/* Responsive Behaviour */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .topbar {
+        padding: 0 var(--spacing-md);
+    }
+
+    .logo-area {
+        width: auto;
+    }
+
+    .top-nav-links {
+        display: none;
+    }
+
+    .search-bar {
+        display: none;
+        /* Hide search on mobile header for now, maybe show icon only */
+    }
+
+    /* Bottom Nav will be visible here */
+    .content-area {
+        padding-bottom: 80px;
+        /* 60px (BottomNav) + 20px (Spacing) */
+    }
+}
