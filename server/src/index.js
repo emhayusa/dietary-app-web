@@ -17,6 +17,12 @@ app.get('/', (req, res) => {
     res.json({ message: 'NutriRecipe API is running', status: 'OK' });
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// Export app for serverless usage
+module.exports = app;
+
+// Only listen if not running in a serverless environment (e.g. local dev)
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
