@@ -16,5 +16,12 @@
     "url": "https://github.com/emhayusa/dietary-app-web/issues"
   },
   "homepage": "https://github.com/emhayusa/dietary-app-web#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "sentry": "^0.5.3",
+    "serverless-http": "^4.0.0"
+  }
 }
